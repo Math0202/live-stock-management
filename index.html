@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Livestock Monitoring System</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
 </head>
 <body>
     <header>
@@ -19,6 +20,7 @@
     </header>
     <nav>
         <ul>
+            <li><a href="#home" class="active">Home</a></li>
             <li><a href="#dashboard">Dashboard</a></li>
             <li><a href="#animal-management">Animal Management</a></li>
             <li><a href="#grazing-camps">Grazing Camps</a></li>
@@ -26,7 +28,7 @@
             <li><a href="#slaughter">Slaughter</a></li>
         </ul>
     </nav>
-    <img src="vaccination.jpg"  alt="logo">
+    <img src="vaccination.jpg" width="100%" alt="logo">
     <main>
         <section id="dashboard" class="dashboard">
             <div class="card">
@@ -70,27 +72,27 @@
                     <tr>
                         <td>C001</td>
                         <td>Cattle</td>
-                        <td>2022-05-15</td>
+                        <td>2024-05-15</td>
                         <td>Young</td>
                         <td>24 months</td>
                     </tr>
                     <tr>
                         <td>S023</td>
                         <td>Sheep</td>
-                        <td>2023-01-10</td>
+                        <td>2024-01-10</td>
                         <td>Lamb</td>
                         <td>12 months</td>
                     </tr>
                     <tr>
                         <td>G045</td>
                         <td>Goat</td>
-                        <td>2022-11-30</td>
+                        <td>2024-11-30</td>
                         <td>Kid</td>
                         <td>10 months</td>
                     </tr>
                 </tbody>
             </table>
-            <a href="#" class="btn btn-success">Add New Animal</a>
+            <a href="#" onclick="showAddAnimalModal()" class="btn btn-success">Add New Animal</a>
         </section>
         
         <section id="grazing-camps" class="card">
@@ -139,22 +141,22 @@
                     <tr>
                         <td>C015</td>
                         <td>Cattle</td>
-                        <td>2023-01-15</td>
-                        <td>2023-07-15</td>
+                        <td>2024-01-15</td>
+                        <td>2024-07-15</td>
                         <td><span class="btn btn-warning">Due Soon</span></td>
                     </tr>
                     <tr>
                         <td>S056</td>
                         <td>Sheep</td>
-                        <td>2023-03-20</td>
-                        <td>2023-09-20</td>
+                        <td>2024-03-20</td>
+                        <td>2024-09-20</td>
                         <td><span class="btn btn-success">Up to Date</span></td>
                     </tr>
                     <tr>
                         <td>G078</td>
                         <td>Goat</td>
                         <td>2022-12-01</td>
-                        <td>2023-06-01</td>
+                        <td>2024-06-01</td>
                         <td><span class="btn btn-danger">Overdue</span></td>
                     </tr>
                 </tbody>
@@ -216,9 +218,9 @@
             <div class="footer-section">
                 <h3>Contact Us</h3>
                 <ul>
-                    <li>Email: info@example.com</li>
-                    <li>Phone: (123) 456-7890</li>
-                    <li>Address: 123 Main St, City, Country</li>
+                    <li>Email: info@farmTech.com</li>
+                    <li>Phone: 081 80 31157</li>
+                    <li>Address: 67 Windhoek West, Namibia</li>
                 </ul>
             </div>
             <div class="footer-section">
