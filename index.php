@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Livestock Monitoring System</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="Scripts/script.js"></script>
 </head>
 <body>
     <header>
@@ -31,137 +31,18 @@
     <img src="vaccination.jpg" width="100%" alt="logo">
     <main>
         <section id="dashboard" class="dashboard">
-            <div class="card">
-                <h2>Total Livestock</h2>
-                <p>Cattle: 150</p>
-                <p>Sheep: 300</p>
-                <p>Goats: 200</p>
-            </div>
-            <div class="card">
-                <h2>Upcoming Rotations</h2>
-                <p>Cattle: 2 days</p>
-                <p>Sheep & Goats: 5 days</p>
-            </div>
-            <div class="card">
-                <h2>Vaccinations Due</h2>
-                <p>15 animals need vaccination this week</p>
-                <a href="#vaccinations" class="btn btn-warning">View Details</a>
-            </div>
-            <div class="card">
-                <h2>Ready for Slaughter</h2>
-                <p>Cattle: 5</p>
-                <p>Sheep: 10</p>
-                <p>Goats: 8</p>
-                <a href="#slaughter" class="btn btn-danger">View Details</a>
-            </div>
+        <?php include 'Back-end/fetch_total_livestock.php'; ?>
+        <?php include 'Back-end/fetch_camp_rotation.php'; ?>
+        <?php include 'Back-end/fetch_vaccination_due.php'; ?>
+        <?php include 'back-end/slotter_details.php';?>
         </section>
         
-        <section id="animal-management" class="card">
-            <h2>Animal Management</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Tag Number</th>
-                        <th>Type</th>
-                        <th>Date of Birth</th>
-                        <th>Age Group</th>
-                        <th>Desired Slaughter Age</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>C001</td>
-                        <td>Cattle</td>
-                        <td>2024-05-15</td>
-                        <td>Young</td>
-                        <td>24 months</td>
-                    </tr>
-                    <tr>
-                        <td>S023</td>
-                        <td>Sheep</td>
-                        <td>2024-01-10</td>
-                        <td>Lamb</td>
-                        <td>12 months</td>
-                    </tr>
-                    <tr>
-                        <td>G045</td>
-                        <td>Goat</td>
-                        <td>2024-11-30</td>
-                        <td>Kid</td>
-                        <td>10 months</td>
-                    </tr>
-                </tbody>
-            </table>
-            <a href="#" onclick="showAddAnimalModal()" class="btn btn-success">Add New Animal</a>
-        </section>
+        <?php include 'back-end/animal_management.php';?>
+        <?php include 'back-end/rotation_table.php';?>
+        <?php include 'back-end/vaccination_details.php';?>
         
-        <section id="grazing-camps" class="card">
-            <h2>Grazing Camp Rotation</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Camp Name</th>
-                        <th>Current Occupants</th>
-                        <th>Days Until Rotation</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>North Field</td>
-                        <td>Cattle (50 head)</td>
-                        <td>2 days</td>
-                    </tr>
-                    <tr>
-                        <td>East Pasture</td>
-                        <td>Sheep (100 head)</td>
-                        <td>5 days</td>
-                    </tr>
-                    <tr>
-                        <td>South Meadow</td>
-                        <td>Goats (75 head)</td>
-                        <td>5 days</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
         
-        <section id="vaccinations" class="card">
-            <h2>Vaccination Tracking</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Tag Number</th>
-                        <th>Type</th>
-                        <th>Last Vaccination</th>
-                        <th>Next Due Date</th>
-                        <th>Status</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>C015</td>
-                        <td>Cattle</td>
-                        <td>2024-01-15</td>
-                        <td>2024-07-15</td>
-                        <td><span class="btn btn-warning">Due Soon</span></td>
-                    </tr>
-                    <tr>
-                        <td>S056</td>
-                        <td>Sheep</td>
-                        <td>2024-03-20</td>
-                        <td>2024-09-20</td>
-                        <td><span class="btn btn-success">Up to Date</span></td>
-                    </tr>
-                    <tr>
-                        <td>G078</td>
-                        <td>Goat</td>
-                        <td>2022-12-01</td>
-                        <td>2024-06-01</td>
-                        <td><span class="btn btn-danger">Overdue</span></td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
+        
         
         <section id="slaughter" class="card">
             <h2>Slaughter Time Determination</h2>
