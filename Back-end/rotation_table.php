@@ -112,7 +112,7 @@ $conn->close();
 
 
 <script>
-    let selectedCampName = '';
+let selectedCampName = '';
 
 function showRotateModal(campName) {
     selectedCampName = campName;
