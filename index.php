@@ -12,7 +12,7 @@
         <table>
             <tr>
                 <td>
-                    <img src="Designer.jpeg" height="130" alt="logo">
+                    <img src="assets/Designer.jpeg" height="130" alt="logo">
                 </td>
                 <td><h1>Livestock Monitoring System</h1></td>
             </tr>
@@ -28,7 +28,7 @@
             <li><a href="#slaughter">Slaughter</a></li>
         </ul>
     </nav>
-    <img src="vaccination.jpg" width="100%" alt="logo">
+    <img src="assets/vaccination.jpg" width="100%" alt="logo">
     <main>
         <section id="dashboard" class="dashboard">
         <?php include 'Back-end/fetch_total_livestock.php'; ?>
